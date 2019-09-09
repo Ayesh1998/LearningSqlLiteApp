@@ -36,16 +36,45 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put(col1,name);
-        cv.put(col2,age);
-        cv.put(col3,address);
-        long res = db.insert(Table_Name,null,cv);
+        cv.put(col1, name);
+        cv.put(col2, age);
+        cv.put(col3, address);
+        long res = db.insert(Table_Name, null, cv);
 
-        if (res==-1){
+        if (res == -1) {
             return false;
-        }else
+        } else
             return true;
 
+    }
+
+    public boolean deleteStudent(String name) {
+        SQLiteDatabase db = getReadableDatabase();
+
+        String[] sele = {name};
+        int res = db.delete(Table_Name, "Name Like ?", sele);
+
+        if (res == -1) {
+            return false;
+        } else
+            return true;
+
+    }
+
+    public boolean updateStudent(String name, String age) {
+
+        SQLiteDatabase db = getReadableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(col2, age);
+        String selection = col1 + " Like ? ";
+        String[] seleArg = {name};
+
+        int res = db.update(Table_Name, cv, selection, seleArg);
+
+        if (res == -1) {
+            return false;
+        } else
+            return true;
     }
 
 

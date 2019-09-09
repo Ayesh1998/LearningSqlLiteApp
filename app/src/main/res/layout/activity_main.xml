@@ -20,7 +20,7 @@
             android:padding="10dp"
             android:layout_margin="5dp"
 
-            android:text="@string/name" />
+            android:hint="@string/name" />
         <EditText
             android:id="@+id/etAge"
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:inputType="textPersonName"
             android:padding="10dp"
             android:layout_margin="5dp"
-            android:text="@string/age" />
+            android:hint="@string/age" />
         <EditText
             android:id="@+id/etAddress"
             android:layout_width="match_parent"
@@ -38,7 +38,7 @@
             android:inputType="textPersonName"
             android:padding="10dp"
             android:layout_margin="5dp"
-            android:text="@string/adress" />
+            android:hint="@string/adress" />
 
         <Button
             android:id="@+id/add"
@@ -48,6 +48,33 @@
             android:layout_marginRight="70dp"
             android:layout_marginTop="10dp"
             android:text="@string/add" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="70dp"
+            android:text="@string/delete" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="70dp"
+            android:text="@string/update" />
+
+        <Button
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="70dp"
+            android:text="@string/view" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
