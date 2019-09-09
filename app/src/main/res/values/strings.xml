@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LearningSqlLiteApp</string>
+    <string name="adress">Adress</string>
+    <string name="age">Age</string>
+    <string name="name">Name</string>
+    <string name="add">Add</string>
 </resources>
